@@ -50,7 +50,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.oem.nosim.ecclist=911,112,999,000,08,118,120,122,110,119,995 \
     ro.ril.emc.mode=2 \
     ro.telephony.ril.v3=signalstrengthgsm,singlepdp,apptypesim \
-    ro.vold.umsdirtyratio=20
+    ro.vold.umsdirtyratio=20 \
+    debug.qctwa.statusbar=1 \
+    debug.qc.hardware=true \
+    debug.qctwa.preservebuf=1
 
 # Set usb type
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -141,8 +144,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
-    libstagefrighthw
-#    libOmxVidEnc \
+    libstagefrighthw \
+    libOmxVidEnc
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
