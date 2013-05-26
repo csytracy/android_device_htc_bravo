@@ -88,9 +88,6 @@ TARGET_USE_O3 := true
 # Scorpion
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
 
-# Headers
-TARGET_SPECIFIC_HEADER_PATH := device/htc/bravo/include
-
 # Wifi
 WIFI_BAND                        := 802_11_ABG
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
