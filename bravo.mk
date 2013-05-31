@@ -164,10 +164,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.hwc.fakevsync=1 \
-    debug.composition.type=mdp \
+    debug.composition.type=gpu \
     debug.gr.numframebuffers=2 \
     debug.egl.hw=1 \
-    debug.composition.type=gpu \
     debug.mdpcomp.maxlayer=0
 
 #
