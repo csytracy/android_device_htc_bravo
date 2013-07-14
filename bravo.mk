@@ -164,9 +164,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.hwc.fakevsync=1 \
-    debug.composition.type=gpu \
     debug.gr.numframebuffers=2 \
     debug.egl.hw=1 \
+    debug.composition.type=gpu \
     debug.mdpcomp.maxlayer=0
 
 #
@@ -179,6 +179,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.checkjni=false
+# Don't put /dalvik-cache to /cache patition. (for CM)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1
 
 # Default heap settings for 512mb device
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
@@ -206,6 +209,10 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=45
+
+# Torch
+PRODUCT_PACKAGES += \
+    Torch
 
 #
 # Qcom
