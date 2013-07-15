@@ -143,6 +143,8 @@ TARGET_FORCE_CPU_UPLOAD := true
 ENABLE_WEBGL := true
 
 # Legacy ril
+LEGACY_RIL := true
+BOARD_USES_LEGACY_RIL := true
 COMMON_GLOBAL_CFLAGS += -DRIL_VERSION_2_SUPPORT
 
 # Camcorder
@@ -156,8 +158,8 @@ BUILD_KERNEL := true
 #BOARD_USES_LEGACY_CAMERA := true
 
 # Override kernel toolchain. (4.6 is too unstable)
-KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3/bin/arm-eabi-
+# KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3/bin/arm-eabi-
 
 # Use old kernel toolchain.  GCC 4.6 may be the root cause of our modem
 # interface dying all the time.
-# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
