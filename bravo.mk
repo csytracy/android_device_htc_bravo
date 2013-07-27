@@ -83,7 +83,6 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/bravo/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
     device/htc/bravo/synaptics-rmi-touchscreen.kcm:system/usr/keychars/synaptics-rmi-touchscreen.kcm \
-    device/htc/bravo/vold.fstab:system/etc/vold.fstab \
     device/htc/bravo/sysctl.conf:system/etc/sysctl.conf
 
 # Permissions

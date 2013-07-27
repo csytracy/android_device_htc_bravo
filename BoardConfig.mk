@@ -32,6 +32,8 @@ include device/htc/qsd8k-common/BoardConfigCommon.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := bravo
 
+TARGET_RECOVERY_FSTAB = device/htc/bravo/prebuilt/fstab.bravo
+
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 msmsdcc_sdioirq=1 wire.search_count=5
 BOARD_KERNEL_BASE := 0x20000000
 BOARD_KERNEL_NEW_PPPOX := true
