@@ -13,4 +13,4 @@ system			/system		yaffs2		rw,noatime,barrier=0				wait
 #/dev/block/mmcblk0p2	/sd-ext		ext4
 
 # Volt
-/devices/platform/msm_sdcc.2/mmc_host/mmc1 /storage/sdcard0 auto default voldmanaged=sdcard:auto
+/devices/platform/msm_sdcc.2/mmc_host/mmc1 /storage/sdcard0 auto default voldmanaged=external_sd:auto
