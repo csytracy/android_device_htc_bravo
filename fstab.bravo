@@ -3,14 +3,12 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-boot			/boot		mtd		defaults					defaults
-cache			/cache		yaffs2		noatime,nosuid,nodev,barrier=0			wait
-userdata		/data		yaffs2		noatime,nosuid,nodev,noauto_da_alloc,barrier=0	wait, encrypt
-#misc			/misc		mtd		defaults					defaults
+boot /boot mtd defaults defaults
+cache /cache yaffs2 defaults defaults
+userdata /data yaffs2 defaults defaults
+misc /misc mtd defaults defaults
 recovery		/recovery	mtd		defaults					defaults
-#/dev/block/mmcblk0p1	/sdcard		vfat		/dev/block/mmcblk0
-system			/system		yaffs2		rw,noatime,barrier=0				wait
-#/dev/block/mmcblk0p2	/sd-ext		ext4
+system /system yaffs2 ro wait
 
 # Volt
 /devices/platform/msm_sdcc.2/mmc_host/mmc1 /storage/sdcard0 auto default voldmanaged=external_sd:auto
