@@ -11,4 +11,4 @@ recovery /recovery mtd defaults defaults
 system /system yaffs2 ro wait
 
 # Volt
-/devices/platform/msm_sdcc.2/mmc_host/mmc1 /storage/sdcard0 vfat default voldmanaged=external_sd:1
+/devices/platform/msm_sdcc.2/mmc_host/mmc1 /storage/sdcard0 vfat defaults voldmanaged=sdcard:1
