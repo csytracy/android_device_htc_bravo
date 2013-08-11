@@ -167,7 +167,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gr.numframebuffers=2 \
     debug.egl.hw=1 \
     debug.composition.type=gpu \
-    debug.mdpcomp.maxlayer=0
+    debug.mdpcomp.maxlayer=0 \
+    ro.sys.fw.bg_apps_limit=10
 
 #
 # Dalvik Properties
@@ -179,6 +180,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.checkjni=false
+       
 # Don't put /dalvik-cache to /cache patition. (for CM)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
