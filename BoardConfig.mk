@@ -69,3 +69,12 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE :=  262144000 # 0x09100000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 154140672 # 0x093a0000
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Legacy ril (for CM)
+LEGACY_RIL := true
+BOARD_USES_LEGACY_RIL := true
+
+# Override in the CM way
+# Use old kernel toolchain.  GCC 4.6 may be the root cause of our modem
+# interface dying all the time.
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
