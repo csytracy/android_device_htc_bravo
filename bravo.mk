@@ -179,9 +179,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.checkjni=false
-# Don't put /dalvik-cache to /cache patition. (for CM)
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexopt-data-only=1
 
 # Default heap settings for 512mb device
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
@@ -241,3 +238,12 @@ PRODUCT_COPY_FILES += \
 
 # Proprietary blobs
 $(call inherit-product-if-exists, vendor/htc/qsd8k-common/qsd8k-vendor.mk)
+
+# Don't put /dalvik-cache to /cache patition. (for CM)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1
+
+# Give it a name
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cm.version=10.1-SSs-bravo \
+    ro.modversion=10.1-SSs-bravo
